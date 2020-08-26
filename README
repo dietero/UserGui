@@ -1,0 +1,19 @@
+This is a GUI utility that works in conjunction with the AttestationTest webservice. Please refer to that project README for details on how to setup the database.
+
+Python Installation:
+1. Create a python virtual environment:
+virtualenv -p env
+
+2. Create a file called db.ini with the following contents:
+[MYSQL]
+DBUSER=mysql db username
+DBPWD=mysql db password
+DBNAME=mysql db name
+
+3. Activate the virtual environment as follows:
+source env/bin/activate
+
+4. Install all the dependancies listed in the file requirements.txt
+
+5. Execute from the command line as follows:
+python3 usergui.py
