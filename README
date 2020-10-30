@@ -2,7 +2,7 @@ This is a GUI utility that works in conjunction with the AttestationTest webserv
 
 Python Installation:
 1. Create a python virtual environment:
-virtualenv -p env
+python3 -m venv ./env
 
 2. Create a file called db.ini with the following contents:
 [MYSQL]
@@ -14,6 +14,7 @@ DBNAME=mysql db name
 source env/bin/activate
 
 4. Install all the dependancies listed in the file requirements.txt
+Pip3 install -r requirements.txt
 
 5. Execute from the command line as follows:
 python3 usergui.py
