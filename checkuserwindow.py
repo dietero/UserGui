@@ -58,14 +58,14 @@ class CheckUserGui(QWidget):
 
         if(dbuser.validateUser(self.usernameVal, self.passwordVal)==False):
             msg = QMessageBox()
-            msg.setIcon(QMessageBox.Critical)
+            msg.setIcon(QMessageBox.Information)
             msg.setText("User validation failed")
             msg.setInformativeText('Incorrect user details or user does not exist')
             msg.setWindowTitle("Error")
             msg.exec()
         else:
             msg = QMessageBox()
-            msg.setIcon(QMessageBox.Critical)
+            msg.setIcon(QMessageBox.Information)
             msg.setText("User validated")
             msg.setInformativeText('User is valid')
             msg.setWindowTitle("User")

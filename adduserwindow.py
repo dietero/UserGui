@@ -80,11 +80,20 @@ class AddUserGui(QWidget):
         dbuser = User();
         if(dbuser.addUser(self.usernameVal, self.passwordVal)==False):
             print('Failed to add user!')
-         
-        QApplication.restoreOverrideCursor()
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setText("User add failed")
+            msg.setInformativeText('User might exist alreaady!')
+            msg.setWindowTitle("Error")
+            msg.exec()
+            self.closeWindow()
+            QApplication.restoreOverrideCursor()
+            return
         
         self.generateQR()
         self.closeWindow()
+
+        QApplication.restoreOverrideCursor()
         
     def usernameEditChanged(self, text):
         if len(text)>globals.usernameMaxLength:
